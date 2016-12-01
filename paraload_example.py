@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 # bugway@gmail.com
-# -*- coding: utf-8 -*-
-# bugway@gmail.com
 
 import itertools
 from time import sleep 

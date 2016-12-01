@@ -1,6 +1,6 @@
 ### paraload
 
-I was bored at home. A friend asked me a question on chat, he said "I need to train a network, but my data is too big to fit the memory, and also I need to do some argumentation on the fly. Do you have a tool for it ?", "Is there any ready to use tool out there for this purpose ?", I replied. "No, I tried to find it online, tried a couple, but none of them fit my needs exactly, espacially that I have a limited memory.", "ok, it's simple, should be a 1 or 2 hours work.", I replied and followed a long silence...., "I think I could write one for you." , he replied immediately with a giant "thank you" emoji...
+I was bored at home. A friend asked me a question on chat, he said "I need to train a network, but my data is too big to fit the memory, and also I need to do some argumentation on the fly. Do you have a tool for it ?", "Is there any ready to use tool out there for this purpose ?", I replied. "No, I tried to find it online, tried a couple, but none of them fit my needs exactly, espacially that I have a limited memory.", "ok, it's simple, should be a 1 or 2 hours work.", I replied and followed a long silence...., "Maybe I could write one for you.", he replied immediately with a giant "thank you" emoji...
 
 
 After ~2 hours work, here is it. following is an example of using it, check paraload_example.py for full example: 
