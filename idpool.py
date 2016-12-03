@@ -6,7 +6,9 @@ import ctypes
 
 class IdPool(object):
     try:
-        _idpool_dll = ctypes.cdll.LoadLibrary(os.path.abspath("c_idpool.so"))
+        lib_location = os.path.join(os.path.dirname(__file__), "c_idpool.so")
+        
+        _idpool_dll = ctypes.cdll.LoadLibrary(lib_location)
         _c_idpool_create = _idpool_dll.idpool_create
         _c_idpool_create.restype = ctypes.c_void_p
         _c_idpool_create.argstype = [ctypes.c_int32]
@@ -35,7 +37,6 @@ class IdPool(object):
     except Exception, e:
         raise e
     
-    # TODO: setup input and output types    
     def __init__(self, size = 8):
         self._c_ip = IdPool._c_idpool_create(size)
         
@@ -49,9 +50,7 @@ class IdPool(object):
         return IdPool._c_idpool_get_available_data_index(self._c_ip)
 
     def return_back_for_use(self, i):
-        #print "fill:", i
         IdPool._c_idpool_return_back_for_use(self._c_ip, i)
 
     def return_back_for_refill(self, i):
-        #print "usedup", i
         IdPool._c_idpool_return_back_for_refill(self._c_ip, i)
